@@ -2,7 +2,7 @@
   <div id="app">
     <BaseHeader/>
     <MainBanner/>
-    <CampaignArea/>
+    <CampaignArea :howMuchItem="2" />
     <ThemesArea/>
     <BaseFooter/>
   </div>
@@ -31,7 +31,7 @@ export default {
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-  :root{--primary-color: rgb(51, 51, 53);}
+  :root{--primary-color: rgb(11 55 149);}
 #app {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,7 +41,7 @@ export default {
 }
 
 .color-blue{
-  color: #0b3795 !important;
+  color: var(--primary-color) !important;
 }
 
 .card-shadow{

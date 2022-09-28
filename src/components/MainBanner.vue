@@ -12,12 +12,12 @@
         "
         id="searchbar"
       >
-        <div class="container py-lg-4 mt-md-180">
+        <div class="container">
           <div class="row row-p-5">
             <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
               <li class="nav-item mr-2 bg-green-transparent">
                 <a
-                  class="nav-link active text-white rounded-0"
+                  class="nav-link active rounded-0"
                   id="home-tab"
                   data-toggle="tab"
                   href="#home"
@@ -204,5 +204,24 @@ export default {
   background: url('@/assets/img/banner.png');
   background-size: 100% !important;
   background-repeat: no-repeat !important;
+}
+
+#searchbar{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.bg-green-transparent {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.active{
+color: var(--primary-color);
+}
+
+.btn-primary{
+  
+  background-color: var(--primary-color) !important;
 }
 </style>

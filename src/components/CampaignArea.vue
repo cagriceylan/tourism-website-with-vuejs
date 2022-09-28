@@ -1,14 +1,17 @@
 <template>
-
-
   <div id="CampaignArea">
-    <BaseTitle category_title="KAMPANYALAR"/>
+    <BaseTitle category_title="KAMPANYALAR" />
 
     <div class="container mt-3">
       <div class="row row-p-5">
         <div class="col-md-4 order-2 order-md-1 mt-md-0 mt-3">
-          <CampaignItem v-for="(item,i) in CampaignData" :key="i" :item="item"/>
-
+          <CampaignItem
+            v-for="(item, i) in campaignData.slice(0, count)"
+            :key="i"
+            :item="item"
+          />
+          <a class="button-link float-right p-3" @click="itemshower">{{buttonText}}</a
+          >
         </div>
 
         <div class="col-md-8 order-1 order-md-2">
@@ -100,28 +103,58 @@ import CampaignItem from "./CampaignItem.vue";
 
 export default {
   name: "CampaignArea",
-  props: {},
   components: {
     CampaignItem,
-    BaseTitle
-},
-data(){
-    return{
-        CampaignData: [
-            {title: "TITLE1", discount: 33},
-            {title: "TITLE2", discount: 14},
-            {title: "TITLE3", discount: 13},
-            {title: "TITLE4", discount: 23}
-    ]}
+    BaseTitle,
+  },
+  data() {
+    return {
+      buttonText: "Tümünü Göster",
+      campaignData: [
+        { title: "TITLE1", discount: 33 },
+        { title: "TITLE2", discount: 14 },
+        { title: "TITLE3", discount: 13 },
+        { title: "TITLE4", discount: 23 },
+        { title: "TITLE5", discount: 13 },
+        { title: "TITLE6", discount: 23 },
+      ],
+      count: this.howMuchItem
+    };
+  },
+  props:{
+    howMuchItem: {
+      default:3
     }
+  },
+  methods: {
+    itemshower: function(){
+      if(this.count == 3){
+        this.count = this.campaignData.lenght;
+        this.buttonText = "Gizle";
+      }
+      else{
+        this.count = 3;
+        this.buttonText = "Tümünü Göster";
+      }
+
+    }
+
+  }
 };
 </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
 #CampaignArea {
-  border-bottom: 2px solid rgb(235, 211, 211);
-  box-shadow: 0 0.3rem 2rem rgb(0 0 0 / 10%);
+  box-shadow: 0 0.3rem 2rem rgb(0 0 0 / 11%);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.button-link {
+  color: var(--primary-color);
+  font-size: 10px;
+  background: transparent;
 }
 </style>
   

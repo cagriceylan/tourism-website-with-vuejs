@@ -28,6 +28,6 @@ export default {
 
     }
     .greenline{
-        border-bottom: 2px solid #32A942;
+        border-bottom: 2px solid var(--primary-color);;
     }
 </style>
