@@ -11,7 +11,7 @@
           </div>
           <div class="card-body-space"></div>
           <div class="card-body">
-            <a class="color-green small float-right" href="index.html">Detaylar</a>
+            <a class="button-link float-right" href="index.html">Detaylar</a>
           </div>
         </div>
       </div>

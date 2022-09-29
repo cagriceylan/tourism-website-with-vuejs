@@ -33,7 +33,7 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <h7 class="font-weight-bold">OTEL</h7>
+                <h6 class="font-weight-bold">OTEL</h6>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownOtel">
                 <a class="dropdown-item" href="hotel-list.html"
@@ -55,24 +55,24 @@
             </li>
             <li class="nav-item mx-2">
               <a class="nav-link" href="tour.html">
-                <h7 class="font-weight-bold">TUR</h7
+                <h6 class="font-weight-bold">TUR</h6
                 ><span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item dropdown mx-2">
               <a class="nav-link" href="hotel-list.html">
-                <h7 class="font-weight-bold">KIBRIS</h7>
+                <h6 class="font-weight-bold">KIBRIS</h6>
               </a>
             </li>
             <li class="nav-item dropdown mx-2">
               <a class="nav-link" href="hotel-list.html">
-                <h7 class="font-weight-bold">FIRSATLAR</h7>
+                <h6 class="font-weight-bold">FIRSATLAR</h6>
               </a>
             </li>
           </ul>
           <span class="navbar-text">
-            <h7 class="float-left pt-2"
-              >Rezervasyon ve Detaylı Bilgi İçin | <b> 444 10 31</b></h7
+            <h6 class="float-left pt-2"
+              >Rezervasyon ve Detaylı Bilgi İçin | <b> 444 10 31</b></h6
             >
           </span>
           <div class="text-right">

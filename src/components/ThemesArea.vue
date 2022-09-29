@@ -3,11 +3,11 @@
     <BaseTitle category_title="TEMALAR"/>
     <div class="container-fluid mt-3">
       <div class="row row-p-5">
-        <div class="col-4 col-md p-0" v-for="(item,i) in themes" :key="i">
+        <div class="col-4 col-md p-0 scale" v-for="(item,i) in themes" :key="i">
           <div class="card h-100 border-0 card-special text-white">
             <a href="hotel-list.html" class="card-text">  
               <img class="card-img" :src ="require(`@/assets/img/${item.img}`)"> 
-              <div class="card-img-overlay bg-dark-gradient">
+              <div class="card-img-overlay bg-dark-gradient -">
                 <h5 class="card-title on-image">{{item.name}}</h5>
               </div>
             </a>

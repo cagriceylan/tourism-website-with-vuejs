@@ -16,78 +16,11 @@
 
         <div class="col-md-8 order-1 order-md-2">
           <div class="row pl-md-3">
-            <div
-              id="carouselExampleIndicators"
-              class="carousel slide w-100"
-              data-ride="carousel"
-            >
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="1"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="2"
-                ></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    class="d-block w-100 campaign-img"
-                    src="@/assets/img/campaign-banner.png"
-                    alt="First slide"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    class="d-block w-100 campaign-img"
-                    src="@/assets/img/campaign-banner.png"
-                    alt="Second slide"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    class="d-block w-100 campaign-img"
-                    src="@/assets/img/campaign-banner.png"
-                    alt="Third slide"
-                  />
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+            <BaseCarousel :sliderimg="campaign2Data"/>
           </div>
           <div class="row float-right">
             <a type="button" class="float-right color-green small"></a>
-            <a class="color-green small float-right" href="hotel-list.html"
+            <a class="button-link float-right" href="hotel-list.html"
               >Tüm Kampanyaları Görüntüle</a
             >
           </div>
@@ -100,12 +33,15 @@
   <script>
 import BaseTitle from "./BaseTitle.vue";
 import CampaignItem from "./CampaignItem.vue";
+import BaseCarousel from "./BaseCarousel.vue";
+
 
 export default {
   name: "CampaignArea",
   components: {
     CampaignItem,
     BaseTitle,
+    BaseCarousel,
   },
   data() {
     return {
@@ -118,6 +54,15 @@ export default {
         { title: "TITLE5", discount: 13 },
         { title: "TITLE6", discount: 23 },
       ],
+      campaign2Data: [
+        { img: "c1.jpg", title: "Best Travel Acency Just For You With %20 Discout!"},
+        { img: "c2.jpg", title: "Best Travel Acency Just For You With %20 Discout!"},
+        { img: "c3.jpg", title: "Best Travel Acency Just For You With %20 Discout!"},
+        { img: "c4.jpg", title: "Best Travel Acency Just For You With %20 Discout!"},
+        { img: "c5.jpg", title: "Best Travel Acency Just For You With %20 Discout!"},
+        { img: "c6.jpg", title: "Best Travel Acency Just For You With %20 Discout!"},
+        { img: "c7.jpg", title: "Best Travel Acency Just For You With %20 Discout!"},
+      ],
       count: this.howMuchItem
     };
   },
@@ -128,12 +73,12 @@ export default {
   },
   methods: {
     itemshower: function(){
-      if(this.count == 3){
+      if(this.count == this.howMuchItem){
         this.count = this.campaignData.lenght;
         this.buttonText = "Gizle";
       }
       else{
-        this.count = 3;
+        this.count = this.howMuchItem;
         this.buttonText = "Tümünü Göster";
       }
 
@@ -151,10 +96,5 @@ export default {
   padding-bottom: 30px;
 }
 
-.button-link {
-  color: var(--primary-color);
-  font-size: 10px;
-  background: transparent;
-}
 </style>
   

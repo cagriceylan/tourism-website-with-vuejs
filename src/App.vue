@@ -2,8 +2,9 @@
   <div id="app">
     <BaseHeader/>
     <MainBanner/>
-    <CampaignArea :howMuchItem="2" />
+    <CampaignArea :howMuchItem="3" />
     <ThemesArea/>
+    <BaseCarousel />
     <BaseFooter/>
   </div>
 </template>
@@ -14,8 +15,7 @@ import MainBanner from './components/MainBanner.vue'
 import CampaignArea from './components/CampaignArea.vue'
 import ThemesArea from './components/ThemesArea.vue'
 import BaseFooter from './components/BaseFooter.vue'
-
-
+import BaseCarousel from './components/BaseCarousel.vue'
 
 export default {
   name: 'App',
@@ -24,8 +24,9 @@ export default {
     MainBanner,
     CampaignArea,
     ThemesArea,
-    BaseFooter
-  }
+    BaseFooter,      
+    BaseCarousel
+  },
 }
 </script>
 
@@ -47,4 +48,23 @@ export default {
 .card-shadow{
         box-shadow: 0 0.3rem 2rem rgb(0 0 0 / 10%);
     }
+
+.button-link {
+  color: var(--primary-color);
+  font-size: 10px;
+  background: transparent;
+}
+.scale{
+  overflow: hidden;
+  
+}
+.scale img{
+
+  transition: all 0.1s ease-in-out;
+}
+.scale:hover img {
+
+
+transform: scale(1.2);
+}
 </style>
