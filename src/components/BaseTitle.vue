@@ -27,13 +27,7 @@ export default {
     #BaseTitle{
 
     }
-    #BaseTitle .col-md-4:hover {
 
-      transition: all 1s ease-in-out;
-
-      transform: scaleY(1.1);
-
-    }
     .greenline{
         border-bottom: 2px solid var(--primary-color);
     }
