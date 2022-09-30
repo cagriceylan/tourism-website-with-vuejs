@@ -114,6 +114,8 @@
     position: absolute; 
     top: 20px; 
     backdrop-filter: blur(17px);
+    word-wrap: break-word;
+    width: 200px;
   }
 
   </style>

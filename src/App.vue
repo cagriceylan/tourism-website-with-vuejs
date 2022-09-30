@@ -5,6 +5,7 @@
     <CampaignArea :howMuchItem="3" />
     <ThemesArea/>
     <BaseCarousel />
+    <TourListArea/>
     <BaseFooter/>
   </div>
 </template>
@@ -16,6 +17,7 @@ import CampaignArea from './components/CampaignArea.vue'
 import ThemesArea from './components/ThemesArea.vue'
 import BaseFooter from './components/BaseFooter.vue'
 import BaseCarousel from './components/BaseCarousel.vue'
+import TourListArea from './components/TourListArea.vue'
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     CampaignArea,
     ThemesArea,
     BaseFooter,      
-    BaseCarousel
+    BaseCarousel,
+    TourListArea
   },
 }
 </script>
