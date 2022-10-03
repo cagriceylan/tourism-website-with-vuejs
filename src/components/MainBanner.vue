@@ -65,14 +65,14 @@
                 <form class="needs-validation" novalidate>
                   <div class="form-row">
                     <div class="col-md-3 mb-0 mb-md-3">
-                      <input
+                      <input v-model="sehir"
                         type="text"
                         class="form-control border-0 py-md-4"
-                        placeholder="Otel / Bölge"
+                        placeholder="City"
                         aria-label="Bölge ara"
                         style="border-bottom: 2px solid #dee2e6 !important"
                       />
-                      <div class="valid-feedback">Looks good!</div>
+                      <p>{{ sonuc }}</p>
                     </div>
                     <div class="col-md-3 mb-0 mb-md-3">
                       <input
@@ -108,8 +108,7 @@
                           border-0
                           py-md-3
                         "
-                        href="hotel-list.html"
-                        type="submit"
+                        @click="search(sehir)"
                         >ARAMA YAP</a
                       >
                     </div>
@@ -196,6 +195,24 @@
 export default {
   name: "MainBanner",
   props: {},
+  methods:{
+    search(a){
+      if(this.city.includes(a)){
+        this.sonuc = "basarili";
+      }
+      else{
+        this.sonuc = "basarisiz";
+      }
+    }
+  },
+  data(){
+    return{
+      sonuc: "",
+      sehir: "City",
+       city : ["Adana","Adiyaman","Afyon","Agri","Aksaray","Amasya","Ankara","Antalya","Ardahan","Artvin","Aydin","Balikesir","Bartin","Batman","Bayburt","Bilecik","Bingol","Bitlis","Bolu","Burdur","Bursa","Canakkale","Cankiri","Corum","Denizli","Diyarbakir","Duzce","Edirne","Elazig","Erzincan","Erzurum","Eskisehir","Gaziantep","Giresun","Gumushane","Hakkari","Hatay","Igdir","Isparta","Istanbul","Izmir","Kahramanmaras","Karabuk","Karaman","Kars","Kastamonu","Kayseri","Kilis","Kirikkale","Kirklareli","Kirsehir","Kocaeli","Konya","Kutahya","Malatya","Manisa","Mardin","Mersin","Mugla","Mus","Nevsehir","Nigde","Ordu","Osmaniye","Rize","Sakarya","Samsun","Sanliurfa","Siirt","Sinop","Sirnak","Sivas","Tekirdag","Tokat","Trabzon","Tunceli","Usak","Van","Yalova","Yozgat","Zonguldak"]
+
+    }
+  }
 };
 </script>
 

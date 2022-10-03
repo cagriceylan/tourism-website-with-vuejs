@@ -8,7 +8,7 @@
         </a>
       </li>
       <li class="page-item" v-for="(item,index) in pageCount" :key="index">
-        <a class="page-link border-0" @click="calculater()">{{index+1}}</a>
+        <a class="page-link border-0 btn" @click="calculater(index)">{{index+1}}</a>
       </li>
       <li class="page-item">
         <a class="page-link border-0" href="#" aria-label="Next">
@@ -37,7 +37,9 @@ data(){
     }
 },
 methods:{
-    calculater(){
+    calculater(index){
+      this.$emit('firstIndex', (5 * index + 0));
+      this.$emit('lastIndex', (5 * index + 5));
     }
 }
 

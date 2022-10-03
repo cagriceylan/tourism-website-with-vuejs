@@ -210,7 +210,7 @@
       </div>
     </div>
     <div class="col-md-3 mx-auto mt-5">
-      <BasePagination :itemCount="tourArray.length" />
+      <BasePagination :itemCount="tourArray.length" @firstIndex="example2" @lastIndex="example3"/>
     </div>
   </div>
 </template>
@@ -224,6 +224,16 @@ export default {
   components: {
     BaseTitle,
     BasePagination,
+  },
+  methods:{
+    example2(value){
+        console.log(value);
+        this.firstIndex = value
+    },
+    example3(value){
+        console.log(value);
+        this.lastIndex = value
+    }
   },
   data() {
     return {
@@ -534,7 +544,12 @@ export default {
 
 <style>
 small {
-  font-size: 7px;
+  font-size: 10px !important;
+}
+
+.font-size-12{
+  
+  font-size: 12px !important;
 }
 
 .line-height-tiny {

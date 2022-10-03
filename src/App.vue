@@ -4,8 +4,8 @@
     <MainBanner/>
     <CampaignArea :howMuchItem="3" />
     <ThemesArea/>
-    <BaseCarousel />
     <TourListArea/>
+    <HotelListArea/>
     <BaseFooter/>
   </div>
 </template>
@@ -16,8 +16,9 @@ import MainBanner from './components/MainBanner.vue'
 import CampaignArea from './components/CampaignArea.vue'
 import ThemesArea from './components/ThemesArea.vue'
 import BaseFooter from './components/BaseFooter.vue'
-import BaseCarousel from './components/BaseCarousel.vue'
 import TourListArea from './components/TourListArea.vue'
+import HotelListArea from './components/HotelListArea.vue'
+
 
 export default {
   name: 'App',
@@ -26,9 +27,9 @@ export default {
     MainBanner,
     CampaignArea,
     ThemesArea,
-    BaseFooter,      
-    BaseCarousel,
-    TourListArea
+    BaseFooter,
+    TourListArea,
+    HotelListArea
   },
 }
 </script>
