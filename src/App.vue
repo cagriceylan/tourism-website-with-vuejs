@@ -2,6 +2,7 @@
   <div id="app">
     <BaseHeader/>
     <MainBanner/>
+    <BaseBlogArea/>
     <CampaignArea :howMuchItem="3" />
     <ThemesArea/>
     <TourListArea/>
@@ -13,6 +14,7 @@
 <script>
 import BaseHeader from './components/BaseHeader.vue'
 import MainBanner from './components/MainBanner.vue'
+import BaseBlogArea from './components/BaseBlogArea.vue'
 import CampaignArea from './components/CampaignArea.vue'
 import ThemesArea from './components/ThemesArea.vue'
 import BaseFooter from './components/BaseFooter.vue'
@@ -29,7 +31,8 @@ export default {
     ThemesArea,
     BaseFooter,
     TourListArea,
-    HotelListArea
+    HotelListArea,
+    BaseBlogArea
   },
 }
 </script>
