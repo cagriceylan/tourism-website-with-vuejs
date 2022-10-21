@@ -13,25 +13,13 @@
     <div class="col-md-12">
       <div>
         <ul
-          class="
-            container
-            nav nav-tabs
-            flex-column flex-sm-row
-            greyline
-            nav-justified
-          "
+          class="container nav nav-tabs flex-column flex-sm-row greyline nav-justified"
           id="myTab"
           role="tablist"
         >
           <li class="nav-item mr-1">
             <a
-              class="
-                nav-link nav-link2
-                active
-                font-weight-bold
-                color-blue
-                text-left text-md-cente
-              "
+              class="nav-link nav-link2 active font-weight-bold color-blue text-left text-md-cente"
               id="home-tab"
               data-toggle="tab"
               href="#home2"
@@ -43,12 +31,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="
-                nav-link nav-link2
-                font-weight-bold
-                color-blue
-                text-left text-md-center
-              "
+              class="nav-link nav-link2 font-weight-bold color-blue text-left text-md-center"
               id="home-tab"
               data-toggle="tab"
               href="#home2"
@@ -60,12 +43,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="
-                nav-link nav-link2
-                font-weight-bold
-                color-blue
-                text-left text-md-center
-              "
+              class="nav-link nav-link2 font-weight-bold color-blue text-left text-md-center"
               id="home-tab"
               data-toggle="tab"
               href="#home2"
@@ -77,12 +55,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="
-                nav-link nav-link2
-                font-weight-bold
-                color-blue
-                text-left text-md-center
-              "
+              class="nav-link nav-link2 font-weight-bold color-blue text-left text-md-center"
               id="home-tab"
               data-toggle="tab"
               href="#home2"
@@ -127,11 +100,14 @@
                     </div>
                   </div>
                   <div class="row p-1">
-                    <div class="col-md-12 pt-1 line-height-tiny" style="text-align: left;">
-                        <h5 class="font-weight-bold">
-                          {{ item.tourName }}
-                        </h5>
-                        <p class="color-grey">{{ item.tourDay }}</p>
+                    <div
+                      class="col-md-12 pt-1 line-height-tiny"
+                      style="text-align: left"
+                    >
+                      <h5 class="font-weight-bold">
+                        {{ item.tourName }}
+                      </h5>
+                      <p class="color-grey">{{ item.tourDay }}</p>
                     </div>
                   </div>
                   <div class="row">
@@ -175,13 +151,7 @@
                     <a
                       type="button"
                       href="hotel-detail.html"
-                      class="
-                        btn btn-primary btn-block
-                        bg-green-gradient
-                        border-0
-                        rounded-0
-                        py-3
-                      "
+                      class="btn btn-primary btn-block bg-green-gradient border-0 rounded-0 py-3"
                       style="padding-left: 28px"
                       >Rezervasyon Yap</a
                     >
@@ -210,7 +180,11 @@
       </div>
     </div>
     <div class="col-md-3 mx-auto mt-5">
-      <BasePagination :itemCount="tourArray.length" @firstIndex="example2" @lastIndex="example3"/>
+      <BasePagination
+        :itemCount="tourArray.length"
+        @firstIndex="example2"
+        @lastIndex="example3"
+      />
     </div>
   </div>
 </template>
@@ -225,15 +199,15 @@ export default {
     BaseTitle,
     BasePagination,
   },
-  methods:{
-    example2(value){
-        console.log(value);
-        this.firstIndex = value
+  methods: {
+    example2(value) {
+      console.log(value);
+      this.firstIndex = value;
     },
-    example3(value){
-        console.log(value);
-        this.lastIndex = value
-    }
+    example3(value) {
+      console.log(value);
+      this.lastIndex = value;
+    },
   },
   data() {
     return {
@@ -535,8 +509,8 @@ export default {
             "https://c.gruppal.com/tmp/symphony-seas-akdeniz-gemi-turu-resimi.jpg",
         },
       ],
-      firstIndex : 0,
-      lastIndex : 5,
+      firstIndex: 0,
+      lastIndex: 5,
     };
   },
 };
@@ -547,8 +521,7 @@ small {
   font-size: 10px !important;
 }
 
-.font-size-12{
-  
+.font-size-12 {
   font-size: 12px !important;
 }
 

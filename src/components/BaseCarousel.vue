@@ -1,122 +1,126 @@
-
 <template>
-    <div class="carousel swiper-container card-shadow" ref="carousel">
-      <div class="swiper-wrapper">
-        <div v-for="(item, index) in sliderimg" class="swiper-slide" :key="item">
-          <img :src="require(`@/assets/img/${item.img}`)" style="width: 100%; height: 100%; filter: blur(1px);">
-          <h5 class="swiper-title">{{item.title}}</h5>
-          <h6 style="color:white; background-color: rgb(0 0 0 / 8%); position: absolute; bottom: 0px; right: 0px;">{{index}}</h6>
-        </div>
-      </div>
-  
-      <div class="swiper-pagination"></div>
-  
-      <div class="swiper-button-prev">
-        <i class="fas fa-angle-left" />
-      </div>
-      <div class="swiper-button-next">
-        <i class="fas fa-angle-right" />
+  <div class="carousel swiper-container card-shadow" ref="carousel">
+    <div class="swiper-wrapper">
+      <div v-for="(item, index) in sliderimg" class="swiper-slide" :key="item">
+        <img
+          :src="require(`@/assets/img/${item.img}`)"
+          style="width: 100%; height: 100%; filter: blur(1px)"
+        />
+        <h5 class="swiper-title">{{ item.title }}</h5>
+        <h6
+          style="
+            color: white;
+            background-color: rgb(0 0 0 / 8%);
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+          "
+        >
+          {{ index }}
+        </h6>
       </div>
     </div>
-  </template>
-  
-  <script>
-  import Swiper, { Autoplay, Navigation, Pagination } from "swiper";
-  import "swiper/swiper-bundle.min.css";
-  Swiper.use([Autoplay, Navigation, Pagination]);
-  
-  export default {
-    name: "BaseCarousel",
-  
-    props: {
-      sliderimg: Array,
-      content: {
-        required: true,
-        type: Array,
-      },
-    },
-  
-    mounted() {
-      this.mountCarousel();
-    },
-  
-    methods: {
-      mountCarousel() {
-        const carouselContainer = this.$refs.carousel;
-        const swiper = new Swiper(carouselContainer, {
-          autoplay: {
-            disableOnInteraction: true,
-          },
-          centeredSlides: true,
-          direction: "horizontal",
-          loop: true,
-          slidesPerView: 1,
-  
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-  
-          pagination: {
-            clickable: true,
-            el: ".swiper-pagination",
-          },
-        });
-  
-        carouselContainer.addEventListener("mouseenter", () => {
-          swiper.autoplay.stop();
-        });
-  
-        carouselContainer.addEventListener("mouseleave", () => {
-          swiper.autoplay.start();
-        });
-      },
-    },
-  };
-  </script>
-  
-  <style lang="scss" scoped>
-  .swiper {
-    &-container {
-      border: 1px solid transparent;
-    }
 
-    &-item{
-      &:hover{
+    <div class="swiper-pagination"></div>
 
-      }
-    }
-  
-    &-slide {
-      align-items: center;
-      color: white;
-      display: flex;
-      font-family: sans-serif;
-      font-weight: bold;
-      height: 450px;
-      justify-content: center;
+    <div class="swiper-button-prev">
+      <i class="fas fa-angle-left" />
+    </div>
+    <div class="swiper-button-next">
+      <i class="fas fa-angle-right" />
+    </div>
+  </div>
+</template>
+
+<script>
+import Swiper, { Autoplay, Navigation, Pagination } from "swiper";
+import "swiper/swiper-bundle.min.css";
+Swiper.use([Autoplay, Navigation, Pagination]);
+
+export default {
+  name: "BaseCarousel",
+
+  props: {
+    sliderimg: Array,
+    //content: {  required: Boolean,  type: Array,},
+  },
+
+  mounted() {
+    this.mountCarousel();
+  },
+
+  methods: {
+    mountCarousel() {
+      const carouselContainer = this.$refs.carousel;
+      const swiper = new Swiper(carouselContainer, {
+        autoplay: {
+          disableOnInteraction: true,
+        },
+        centeredSlides: true,
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 1,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        pagination: {
+          clickable: true,
+          el: ".swiper-pagination",
+        },
+      });
+
+      carouselContainer.addEventListener("mouseenter", () => {
+        swiper.autoplay.stop();
+      });
+
+      carouselContainer.addEventListener("mouseleave", () => {
+        swiper.autoplay.start();
+      });
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.swiper {
+  &-container {
+    border: 1px solid transparent;
+  }
+
+  &-item {
+    &:hover {
     }
   }
 
-
-
-  .swiper-button-next:after{
-    color:white !important;
+  &-slide {
+    align-items: center;
+    color: white;
+    display: flex;
+    font-family: sans-serif;
+    font-weight: bold;
+    height: 450px;
+    justify-content: center;
   }
+}
 
-  .swiper-button-prev:after{
-    color:white !important;
-  }
-  .swiper-title{
-    padding: 20px;
-    color:white; 
-    background-color: rgb(0 0 0 / 8%); 
-    position: absolute; 
-    top: 20px; 
-    backdrop-filter: blur(17px);
-    word-wrap: break-word;
-    width: 200px;
-  }
+.swiper-button-next:after {
+  color: white !important;
+}
 
-  </style>
-  
+.swiper-button-prev:after {
+  color: white !important;
+}
+.swiper-title {
+  padding: 20px;
+  color: white;
+  background-color: rgb(0 0 0 / 8%);
+  position: absolute;
+  top: 20px;
+  backdrop-filter: blur(17px);
+  word-wrap: break-word;
+  width: 200px;
+}
+</style>
