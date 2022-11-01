@@ -1,24 +1,4 @@
-# travel-website
+# Travel Website
+### ScreenShot
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://user-images.githubusercontent.com/19360399/199224254-8692526b-6746-4f8b-81c6-e0e191f1c3e1.mp4
