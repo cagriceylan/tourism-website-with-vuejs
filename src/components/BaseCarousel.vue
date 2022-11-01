@@ -6,17 +6,9 @@
           :src="require(`@/assets/img/${item.img}`)"
           style="width: 100%; height: 100%; filter: blur(1px)"
         />
-        <h5 class="swiper-title">{{ item.title }}</h5>
-        <h6
-          style="
-            color: white;
-            background-color: rgb(0 0 0 / 8%);
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-          "
-        >
-          {{ index }}
+        <p class="swiper-title">{{ item.title }}</p>
+        <h6 style="position: absolute; bottom: 0px; right: 0px">
+          Campaign Number: {{ index }}
         </h6>
       </div>
     </div>
@@ -97,7 +89,6 @@ export default {
 
   &-slide {
     align-items: center;
-    color: white;
     display: flex;
     font-family: sans-serif;
     font-weight: bold;
@@ -115,11 +106,11 @@ export default {
 }
 .swiper-title {
   padding: 20px;
-  color: white;
-  background-color: rgb(0 0 0 / 8%);
   position: absolute;
   top: 20px;
-  backdrop-filter: blur(17px);
+  right: 20px;
+  background-color: rgba(255, 0, 0, 0.493);
+  color: white;
   word-wrap: break-word;
   width: 200px;
 }

@@ -84,9 +84,7 @@
                 <div class="col-md-3 px-0">
                   <img
                     class="w-100 h-100"
-                    v-for="i in item.images"
-                    :key="i"
-                    :src="i.fullPath"
+                    src="https://www.eliteal-tur.com/images/upload/1__1628246790_2.jpg"
                   />
                   <i class="fa fa-heart fa-6"></i>
                 </div>
@@ -228,11 +226,14 @@ export default {
     async getData() {
       try {
         const response = await axios.post(
-          "http://10.0.8.40:2080/api/seo_page/slug",
+          "http://LOCALADRESS/api/seo_page/slug",
           {
             slug: "girne-otelleri",
+            origin: "",
+            checkIn: "",
+            checkOut: "",
           },
-          { headers: { "X-AUTH-TOKEN": "0dea3d3ca70e2e7c895c4d2edf0bad71" } }
+          { headers: { "X-AUTH-TOKEN": "" } }
         );
         this.hotelArray = response.data.data.result;
         this.city = response.data.data.hotelDestination;

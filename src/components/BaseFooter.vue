@@ -111,7 +111,7 @@
           </div>
           <div class="col-6 pl-0 pt-3">
             <h6 class="float-left pt-2">
-              Rezervasyon ve Detaylı Bilgi İçin<b> 444 10 31</b>
+              Rezervasyon ve Detaylı Bilgi İçin<b> 444 44 44</b>
             </h6>
           </div>
         </div>
